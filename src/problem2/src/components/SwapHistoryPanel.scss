@@ -1,0 +1,125 @@
+@use '../styles/variables' as *;
+
+.history-panel {
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.06);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  &-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &-list {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-item {
+    padding: 10px 12px;
+    background: $bg-input;
+    border: 1px solid $border;
+    border-radius: $radius-sm;
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  &-arrow {
+    color: $accent;
+    font-weight: 600;
+  }
+
+  &-amounts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $text-primary;
+    margin-bottom: 6px;
+  }
+
+  &-muted {
+    color: $text-muted;
+  }
+
+  &-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+    color: $text-muted;
+  }
+}
+
+.history-clear-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: transparent;
+  color: $text-muted;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+}
+
+.history-empty {
+  &-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 12px;
+  }
+
+  &-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  &-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 8px;
+  }
+
+  &-desc {
+    font-size: 13px;
+    color: $text-muted;
+    line-height: 1.5;
+    max-width: 220px;
+  }
+}

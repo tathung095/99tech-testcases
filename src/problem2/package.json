@@ -1,0 +1,21 @@
+{
+  "name": "n99-admin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sonner": "^2.0.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "sass": "^1.101.0",
+    "vite": "^6.3.5"
+  }
+}

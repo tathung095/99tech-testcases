@@ -1,0 +1,262 @@
+@use './styles/variables' as *;
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: $bg-secondary;
+    border-bottom: 1px solid $border;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    gap: 8px;
+    background: $bg-input;
+    padding: 4px;
+    border-radius: 24px;
+    border: 1px solid $border;
+  }
+
+  &-main {
+    flex: 1;
+    padding: 32px 24px;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+
+    &-wide {
+      max-width: 1440px;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, $accent, $accent-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: transparent;
+  color: $text-secondary;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $text-primary;
+  }
+
+  &.active {
+    background: $accent;
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3);
+  }
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.page-desc {
+  color: $text-secondary;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.overview-intro {
+  p {
+    margin: 0;
+
+    & + p {
+      margin-top: 6px;
+    }
+  }
+}
+
+.card {
+  background: $bg-card;
+  border-radius: $radius;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid $border;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.06);
+
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: $text-primary;
+  }
+
+  &-subtitle {
+    font-size: 12px;
+    color: $text-muted;
+    margin-bottom: 16px;
+  }
+}
+
+.code-block {
+  background: #f8fafc;
+  border-radius: $radius-sm;
+  padding: 16px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-x: auto;
+  color: #334155;
+  border: 1px solid $border;
+  margin-bottom: 16px;
+  white-space: pre;
+
+  .keyword { color: #7c3aed; }
+  .func { color: #2563eb; }
+  .number { color: #ea580c; }
+  .comment { color: #94a3b8; }
+}
+
+.demo-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.demo-input {
+  background: $bg-input;
+  border: 1px solid $border;
+  border-radius: $radius-sm;
+  padding: 10px 14px;
+  color: $text-primary;
+  font-size: 16px;
+  width: 120px;
+
+  &:focus {
+    outline: none;
+    border-color: $accent;
+  }
+}
+
+.btn-primary {
+  background: $accent;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: $radius-sm;
+  font-size: 14px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: $accent-hover;
+  }
+}
+
+.result-badge {
+  background: #ecfdf5;
+  padding: 8px 16px;
+  border-radius: $radius-sm;
+  font-size: 14px;
+  color: $success;
+  font-weight: 600;
+  border: 1px solid #a7f3d0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+
+  &-formula { background: #ecfdf5; color: $success; }
+  &-recursive { background: #f5f3ff; color: #7c3aed; }
+  &-iterative { background: $accent-light; color: $accent; }
+}
+
+.overview {
+  &-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  &-card {
+    background: $bg-card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 20px;
+    text-align: left;
+    color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.06);
+
+    &:hover {
+      border-color: $accent-muted;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+      transform: translateY(-2px);
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      color: $text-secondary;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+  }
+
+  &-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $accent;
+    margin-bottom: 8px;
+  }
+
+  &-link {
+    font-size: 14px;
+    color: $accent;
+    font-weight: 500;
+  }
+}
