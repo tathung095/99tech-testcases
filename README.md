@@ -5,16 +5,16 @@ Solutions for the 99Tech take-home problems.
 ## Layout
 
 ```
-source/
+src/
   problem1/   # Sum to N
   problem2/   # Token Swap UI (Vite + React)
   problem3/   # Messy React refactor
 ```
 
-## Problem 2 (UI demo)
+## UI demo (problem2)
 
 ```bash
-cd source/problem2
+cd src/problem2
 npm install
 npm run dev
 ```

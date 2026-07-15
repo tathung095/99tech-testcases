@@ -7,25 +7,11 @@ const AUTHOR = {
 export default function OverviewPage({ onNavigate }) {
   const solutions = [
     {
-      id: "problem1",
-      title: "Problem 1 — Sum to N",
-      description:
-        "Three algorithmic approaches to compute the sum 1 + 2 + … + n: Gauss formula (O(1)), recursion, and iterative loop. Interactive demo with live results.",
-      tag: "Algorithms",
-    },
-    {
-      id: "problem2",
-      title: "Problem 2 — Token Swap",
+      id: "main",
+      title: "Token Swap",
       description:
         "A swap UI with multi-network token exchange, slippage settings, wallet connect flow, and persistent swap history.",
       tag: "DeFi UI",
-    },
-    {
-      id: "problem3",
-      title: "Problem 3 — Messy React",
-      description:
-        "Refactor a messy React/TypeScript component: fixes computational bugs and anti-patterns, shown side by side with the original.",
-      tag: "Refactor",
     },
   ];
 

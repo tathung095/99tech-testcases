@@ -4,7 +4,7 @@ import SwapHistoryPanel from "../components/SwapHistoryPanel";
 import TokenSelectModal from "../components/TokenSelectModal";
 import { useSwap } from "../hooks/useSwap";
 import { formatAmountDisplay } from "../utils/formatAmount";
-import "./Problem2.scss";
+import "./MainPage.scss";
 
 const SLIPPAGE_OPTIONS = [0.1, 0.5, 1];
 
@@ -30,7 +30,7 @@ function TokenPickerButton({ token, onClick }) {
   );
 }
 
-export default function Problem2() {
+export default function MainPage() {
   const { quote, actions, ...s } = useSwap();
 
   if (s.loading) {

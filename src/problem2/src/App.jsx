@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
-import Problem1 from "./pages/Problem1";
-import Problem2 from "./pages/Problem2";
-import Problem3 from "./pages/Problem3";
+import MainPage from "./pages/MainPage";
 import OverviewPage from "./pages/OverviewPage";
 import "./App.scss";
 
 const TABS = [
   { id: "overview", label: "Overview" },
-  { id: "problem1", label: "Problem 1" },
-  { id: "problem2", label: "Problem 2" },
-  { id: "problem3", label: "Problem 3" },
+  { id: "main", label: "Main" },
 ];
 
 const TAB_IDS = new Set(TABS.map((t) => t.id));
@@ -67,14 +63,10 @@ export default function App() {
       </header>
 
       <main
-        className={`app-main ${
-          activeTab === "problem2" || activeTab === "problem3" ? "app-main-wide" : ""
-        }`}
+        className={`app-main ${activeTab === "main" ? "app-main-wide" : ""}`}
       >
         {activeTab === "overview" && <OverviewPage onNavigate={navigate} />}
-        {activeTab === "problem1" && <Problem1 />}
-        {activeTab === "problem2" && <Problem2 />}
-        {activeTab === "problem3" && <Problem3 />}
+        {activeTab === "main" && <MainPage />}
       </main>
     </div>
   );
