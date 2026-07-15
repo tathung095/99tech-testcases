@@ -1,7 +1,7 @@
 const AUTHOR = {
   email: "tathung095@gmail.com",
-  github: "https://github.com/tathung095",
-  githubLabel: "github.com/tathung095",
+  github: "https://github.com/tathung095/99tech-testcases",
+  githubLabel: "99tech-testcases",
 };
 
 export default function OverviewPage({ onNavigate }) {
